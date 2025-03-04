@@ -4,7 +4,7 @@ import Utility.BaseDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class _03_Assertions extends BaseDriver {
+public class _03_Assertions_xXx extends BaseDriver {
 
     @Test
     public void equalsExample() {
