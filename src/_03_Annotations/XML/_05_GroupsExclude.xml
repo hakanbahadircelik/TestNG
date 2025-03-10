@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuite">
+
+    <test name="myTest01">
+
+        <!-- which groups going to work -->
+        <groups>
+            <run>
+                <exclude name="Smoke Test"> </exclude>
+            </run>
+        </groups>
+
+
+        <!-- which classes going to work -->
+        <classes>
+            <class name="_03_Annotations._03_Groups"> </class>
+        </classes>
+
+    </test>
+
+</suite>
