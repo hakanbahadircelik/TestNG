@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuite">
+
+    <test name="myTest01">
+        
+        <parameter name="message" value="baha Steel"></parameter>
+        
+        <classes>
+            <class name="_03_Annotations._05_ContactUsParameter">  </class>
+        </classes>
+    </test>
+
+</suite>
