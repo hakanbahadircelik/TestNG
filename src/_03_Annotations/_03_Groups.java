@@ -1,8 +1,8 @@
-package _03_Annotations.XML;
+package _03_Annotations;
 
 import org.testng.annotations.Test;
 
-public class _04_Groups {
+public class _03_Groups {
 
     @Test(groups = {"Smoke Test"})
     public void Test01(){ System.out.println("Test01"); }
