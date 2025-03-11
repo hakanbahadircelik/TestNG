@@ -22,15 +22,23 @@ public class BaseDriverParameter {
 
     @BeforeClass
     @Parameters("browserType")
-    public void startingProcess(String browserType){
+    public void startingProcess(String browserType) {
         Logger logger = Logger.getLogger(""); // get output logs
         logger.setLevel(Level.SEVERE); // show only errors
 
-        if (browserType.equals("chrome"))
-            driver = new ChromeDriver();  //  jenkins : start without head, work on memory
+        switch (browserType.toLowerCase()) {
 
-        if (browserType.equals("edge"))
-            driver = new EdgeDriver();
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+
+            default:
+                driver = new ChromeDriver();
+        }
 
         driver.manage().window().maximize(); // makes fullScreen
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // loading page wait till 30sec, or ERROR
@@ -40,7 +48,7 @@ public class BaseDriverParameter {
         loginTest(); // if you dont use, close it with //
     }
 
-    public void loginTest(){
+    public void loginTest() {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
         MyFunc.Wait(1);
 
@@ -62,7 +70,7 @@ public class BaseDriverParameter {
     }
 
     @AfterClass
-    public void finishingProcess(){
+    public void finishingProcess() {
         MyFunc.Wait(3);
         driver.quit();
     }
