@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -28,8 +29,8 @@ public class BaseDriverParameter {
         if (browserType.equals("chrome"))
             driver = new ChromeDriver();  //  jenkins : start without head, work on memory
 
-        if (browserType.equals("firefox"))
-            driver = new FirefoxDriver();
+        if (browserType.equals("edge"))
+            driver = new EdgeDriver();
 
         driver.manage().window().maximize(); // makes fullScreen
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // loading page wait till 30sec, or ERROR
