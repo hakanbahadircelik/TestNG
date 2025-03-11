@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuite">
+
+    <test name="myTest01">
+        
+        <parameter name="searchText" value="mac"></parameter>
+        <parameter name="browserType" value="firefox"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="_04_Parameters._02_SearchParameterDriver">  </class>
+        </classes>
+
+    </test>
+
+
+</suite>
