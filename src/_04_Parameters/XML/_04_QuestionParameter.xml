@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuite" parallel="tests" thread-count="2"> <!-- this 2 paralel this will work and 2 of them work will together -->
+
+    <test name="myTest01">
+
+        <parameter name="browserType" value="edge"></parameter>
+
+        <classes>
+            <class name="_04_Parameters._04_QuestionWith_Parameter">  </class>
+        </classes>
+
+    </test>
+
+    <test name="myTest02">
+
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="_04_Parameters._04_QuestionWith_Parameter">  </class>
+        </classes>
+
+    </test>
+
+
+</suite>
