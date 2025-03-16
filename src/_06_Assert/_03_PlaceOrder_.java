@@ -1,8 +1,6 @@
 package _06_Assert;
 
 import Utility.BaseDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,7 +10,7 @@ public class _03_PlaceOrder_ extends BaseDriver {
     @Test
     public void test01(){
 
-        _03_PlaceOrder_Elements elements = new _03_PlaceOrder_Elements();
+        _03_PlaceOrder_POM elements = new _03_PlaceOrder_POM();
 
         elements.searchBox.sendKeys("ipod");
         elements.searchBtn.click();

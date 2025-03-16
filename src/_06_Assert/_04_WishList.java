@@ -4,14 +4,13 @@ import Utility.BaseDriver;
 import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class _04_WishList_ extends BaseDriver {
+public class _04_WishList extends BaseDriver {
 
     @Test
     @Parameters("searchText")

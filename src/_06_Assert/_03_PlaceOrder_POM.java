@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class _03_PlaceOrder_Elements {
+public class _03_PlaceOrder_POM {
 
-    public _03_PlaceOrder_Elements() {
+    public _03_PlaceOrder_POM() {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 

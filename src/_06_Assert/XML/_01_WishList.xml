@@ -7,7 +7,7 @@
         <parameter name="searchText" value="ipod"></parameter>
 
         <classes>
-            <class name="_06_Assert._04_WishList_">  </class>
+            <class name="_06_Assert._04_WishList">  </class>
         </classes>
 
     </test>
