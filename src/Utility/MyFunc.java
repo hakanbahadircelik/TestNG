@@ -20,4 +20,8 @@ public class MyFunc {
         Assert.assertTrue(msgLabel.getText().toLowerCase().contains("success"));
     }
 
+    public static int randomGenerator(int limit){
+        return (int)(Math.random()*limit);
+    }
+
 }

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuite">
+
+    <test name="myTest01">
+        
+        <parameter name="searchText" value="ipod"></parameter>
+
+        <classes>
+            <class name="_06_Assert._04_WishList_">  </class>
+        </classes>
+
+    </test>
+
+</suite>
