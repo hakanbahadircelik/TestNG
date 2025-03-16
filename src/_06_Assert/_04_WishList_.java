@@ -32,7 +32,6 @@ public class _04_WishList_ extends BaseDriver {
         wishLBtnResult.get(randomChoose).click(); // random clicked to the product
 
         WebElement wishListLink = driver.findElement(By.xpath("//a[text()='wish list']"));
-        wait.until(ExpectedConditions.elementToBeClickable(wishListLink));
         wishListLink.click();
 
         // going to wishlist
