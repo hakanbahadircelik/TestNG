@@ -66,12 +66,14 @@ public class BaseDriver {
 
     @BeforeMethod
     public void beforeMethod(){
-        System.out.println("test method started");
+        logger4j.info("test started");
+        logger4j.warn("warning msg, test started");
     }
 
     @AfterMethod
     public void afterMethod(){
-        System.out.println("test method finished");
+        logger4j.info("test finished");
+        logger4j.warn("warning msg, test finished");
     }
 
 
