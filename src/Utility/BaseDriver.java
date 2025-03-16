@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 public class BaseDriver {
 
-    public static final org.apache.logging.log4j.Logger logger4j = LogManager.getLogger();
+    public static org.apache.logging.log4j.Logger logAdd = LogManager.getLogger();
 
     public static WebDriver driver;
     public static WebDriverWait wait;
@@ -66,14 +66,14 @@ public class BaseDriver {
 
     @BeforeMethod
     public void beforeMethod(){
-        logger4j.info("test started");
-        logger4j.warn("warning msg, test started");
+        logAdd.info("test started");
+        logAdd.warn("warning msg, test started");
     }
 
     @AfterMethod
     public void afterMethod(){
-        logger4j.info("test finished");
-        logger4j.warn("warning msg, test finished");
+        logAdd.info("test finished");
+        logAdd.warn("warning msg, test finished");
     }
 
 
