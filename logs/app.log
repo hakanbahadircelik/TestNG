@@ -1,0 +1,4 @@
+2025-03-17 03:11:58.507 INFO  test started
+2025-03-17 03:11:58.513 WARN  warning msg, test started
+2025-03-17 03:11:59.480 INFO  brandsValidation test finished passed
+2025-03-17 03:11:59.480 WARN  warning msg, test finished

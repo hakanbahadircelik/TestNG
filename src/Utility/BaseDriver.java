@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -18,13 +19,13 @@ import java.util.logging.Logger;
 
 public class BaseDriver {
 
-    public static org.apache.logging.log4j.Logger logAdd = LogManager.getLogger();
+    public static final org.apache.logging.log4j.Logger logger4j = LogManager.getLogger();
 
     public static WebDriver driver;
     public static WebDriverWait wait;
 
     @BeforeClass
-    public void startingProcess(){
+    public void startingProcess() {
         Logger logger = Logger.getLogger(""); // get output logs
         logger.setLevel(Level.SEVERE); // show only errors
 
@@ -37,7 +38,7 @@ public class BaseDriver {
         loginTest(); // if you dont use, close it with //
     }
 
-    public void loginTest(){
+    public void loginTest() {
         driver.get("https://opencart.abstracta.us/index.php?route=account/login");
         MyFunc.Wait(1);
 
@@ -59,21 +60,21 @@ public class BaseDriver {
     }
 
     @AfterClass
-    public void finishingProcess(){
+    public void finishingProcess() {
         MyFunc.Wait(3);
         driver.quit();
     }
 
     @BeforeMethod
-    public void beforeMethod(){
-        logAdd.info("test started");
-        logAdd.warn("warning msg, test started");
+    public void beforeMethod() {
+        logger4j.info("test started");
+        logger4j.warn("warning msg, test started");
     }
 
     @AfterMethod
-    public void afterMethod(){
-        logAdd.info("test finished");
-        logAdd.warn("warning msg, test finished");
+    public void afterMethod(ITestResult result) {
+        logger4j.info(result.getName() + " test finished " + (result.getStatus() == 1 ? "passed" : "fail"));
+        logger4j.warn("warning msg, test finished");
     }
 
 
